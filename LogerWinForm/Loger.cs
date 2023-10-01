@@ -15,7 +15,8 @@ namespace LogerWinForm
 
         public void Log(string message)
         {
-            string messageFull = DateTime.Now.ToString("yyyy.MM.dd || hh:mm:ss:ffff" + " || " + message); //++ || 08:46:22:7034            
+            // string messageFull = DateTime.Now.ToString("yyyy.MM.dd || hh:mm:ss:ffff" + " || " + message); //++ || 08:46:22:7034            
+            string messageFull = string.Format("{0} || {1}", DateTime.Now.ToString("yyyy.MM.dd || hh:mm:ss:ffff"), message); //++ || 08:46:22:7034
             WriteLine(messageFull);
         }
         
